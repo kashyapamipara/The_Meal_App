@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter/services.dart';
 import 'dummy_data.dart';
 import 'tabs_screen.dart';
 import 'meal_detail_screen.dart';
@@ -8,7 +8,12 @@ import 'filters_screen.dart';
 import 'categories_screen.dart';
 import './models/meal.dart';
 
-void main() => runApp(MyApp());
+void main() {
+//Do this in main.dart
+
+    runApp(MyApp());
+
+}
 
 class MyApp extends StatefulWidget {
   @override
@@ -16,6 +21,15 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    super.initState();
+
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+   
+    ]);
+  }
   Map<String, bool> _filters = {
     'gluten': false,
     'lactose': false,
