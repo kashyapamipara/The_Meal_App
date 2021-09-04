@@ -9,7 +9,7 @@ import 'categories_screen.dart';
 import './models/meal.dart';
 
 void main() {
-//Do this in main.dart
+
 
     runApp(MyApp());
 
